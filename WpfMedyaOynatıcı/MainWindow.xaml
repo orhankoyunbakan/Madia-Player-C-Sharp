@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfMedyaOynatıcı.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMedyaOynatıcı"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <MediaElement x:Name="mediaElement1"  HorizontalAlignment="Center" Height="333" VerticalAlignment="Top" Width="797" LoadedBehavior="Manual" MediaOpened="mediaElement1_MediaOpened"/>
+        <Button  HorizontalAlignment="Left" Margin="400,363,0,0" VerticalAlignment="Top" Height="33" Width="40" Click="Button_Click">
+            <Image Source="C:\Users\orhan\source\repos\WpfMedyaOynatıcı\WpfMedyaOynatıcı\play_icon.png" Width="40"></Image>
+        </Button>
+        <Button  HorizontalAlignment="Left" Margin="466,376,0,0" VerticalAlignment="Top" Width="28" Click="Button_Click_1">
+            <Image Source="C:\Users\orhan\source\repos\WpfMedyaOynatıcı\WpfMedyaOynatıcı\pause_icon.png"></Image>
+
+        </Button>
+        <Button  HorizontalAlignment="Left" Margin="346,376,0,0" VerticalAlignment="Top" Width="28" Click="Button_Click_2">
+            <Image Source="C:\Users\orhan\source\repos\WpfMedyaOynatıcı\WpfMedyaOynatıcı\stop_icon.png"></Image>
+
+        </Button>
+        <Button  HorizontalAlignment="Left" Margin="76,363,0,0" VerticalAlignment="Top" Height="33" Width="40" Click="Button_Click_3">
+            <Image Source="C:\Users\orhan\source\repos\WpfMedyaOynatıcı\WpfMedyaOynatıcı\openfile_icon.png"></Image>
+
+        </Button>
+        <Label x:Name="label_speed" Content="Speed" HorizontalAlignment="Left" Margin="137,378,0,0" VerticalAlignment="Top"/>
+        <Slider Name="speedRatioSlider" VerticalAlignment="Top" Minimum="1"  Margin="185,382,501,0" ValueChanged="ChangeMediaSpeedRatio"  Width="120"/>
+        <Slider x:Name="slider1" HorizontalAlignment="Left" Margin="10,332,0,0" VerticalAlignment="Top" Width="722" Height="18" Maximum="0" ValueChanged="slider1_ValueChanged"/>
+        <Slider x:Name="slider2"  Minimum="0" Maximum="1"  HorizontalAlignment="Left" Margin="612,381,0,0" VerticalAlignment="Top" Width="120" ValueChanged="slider2_ValueChanged" Value="1" />
+        <Label x:Name="label_volume" Content="Volume" HorizontalAlignment="Left" Margin="557,378,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_time" Content="00:00:00" HorizontalAlignment="Left" Margin="732,328,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
